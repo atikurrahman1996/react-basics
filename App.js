@@ -1,17 +1,29 @@
-import "./App.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+//import "./App.css";
+//import About from "./pages/About";
+//import Home from "./pages/Home";
+//import Contact from "./pages/Contact";
+//import Fragments from "./pages/Fragments";
+//import Clipboard from "./pages/Clipboard";
+import Focus from "./pages/Focus";
+import Keyboard from "./pages/Keyboard";
+import Conditional from "./pages/Conditional";
+import Conditional1 from "./pages/Conditional1";
+import Style from "./pages/Style";
+import ReactBootstrap from "./pages/ReactBootstrap";
+import InputForm from "./pages/InputForm";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/About" element={<About />}></Route>
-        <Route path="/Contact" element={<Contact />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Focus />
+      <Keyboard />
+      <Conditional />
+      <Conditional1 />
+      <Style />
+      <ReactBootstrap />
+      <InputForm />
+    </div>
   );
 }
 
