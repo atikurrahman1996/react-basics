@@ -1,6 +1,6 @@
 import React from "react";
 import Account from "./Account";
-import Logo from "../assests/image/logo-bg.png";
+import Logo from "../assests/images/logo-bg.png";
 import Classes from "../Styles/Layout.module.css";
 
 function Nav() {
