@@ -1,45 +1,11 @@
-import React, { Component } from "react";
+import classes from "../styles/Form.module.css";
 
-class Form extends Component {
-  state = {
-    title: "JavaScript",
-    text: "JavaScript is awesom",
-  };
-
-  handleChange = (e) => {
-    if (e.target.type === "text") {
-      this.setState({
-        title: e.target.value,
-      });
-    } else if (e.target.type === "textarea") {
-      this.setState({
-        text: e.target.value,
-      });
-    } else {
-      console.log("nothing");
-    }
-  };
-
-  render() {
-    const { title, text } = this.state;
-    return (
-      <div>
-        <form>
-          <input
-            type="text"
-            placeholder="Enter Title"
-            value={title}
-            onChange={this.handleChange}
-          />
-
-          <br />
-          <br />
-
-          <textarea name="text" value={text} onChange={this.handleChange} />
-        </form>
-      </div>
-    );
-  }
+function Form({ children, className, ...rest }) {
+  return (
+    <form className={`${className} ${classes.form}`} action="#" {...rest}>
+      {children}
+    </form>
+  );
 }
 
 export default Form;
